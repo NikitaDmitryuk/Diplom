@@ -1,0 +1,135 @@
+\documentclass[%
+candidate, % тип документа
+subf, % подключить и настроить пакет subfig для вложенной нумерации рисунков
+%href, % подключить и настроить пакет hyperref
+%colorlinks=true % цветные гиперссылки
+times % шрифт Times как основной
+%,fixint=false % отключить прямые знаки интегралов
+]{disser}
+
+\usepackage[
+a4paper, mag=1000,
+left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+]{geometry}
+\usepackage[T2A]{fontenc}
+%\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{pdfpages}
+\ifpdf\usepackage{epstopdf}\fi
+
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cite}
+\usepackage{multirow}
+\usepackage{afterpage}
+\usepackage[font={normal}]{caption}
+
+\usepackage{setspace}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\captionsetup{format=hang,labelsep=period}
+
+% Использовать полужирное начертание для векторов
+\let\vec=\mathbf
+
+% Включать подсекции в оглавление
+\setcounter{tocdepth}{2}
+
+\graphicspath{{fig/}}
+
+\bibliographystyle{unsrt}
+
+\begin{document}
+%\includepdf[pages={1-1}]{NIRS.pdf}
+% Содержание
+
+
+\begin{titlepage}
+
+\begin{center}
+{
+\footnotesize\setstretch{1.0}
+Федеральное государственное бюджетное образовательное учреждение высшего образования\\
+<<Московский государственный технический университет имени Н.Э. Баумана\\ (национальный исследовательский университет)>>\\(МГТУ им. Н.Э. Баумана)\\
+}
+\end{center}
+\begin{figure}[h!]
+% \begin{minipage}[b]{0.2\textwidth}\centering
+%\begin{flushright}
+% \includegraphics[width=0.9\linewidth]{r2.png}
+%\end{flushright}
+% \end{minipage}
+\begin{minipage}[b]{0.9\textwidth}\setstretch{1.5}\centering
+Факультет <<Фундаментальные науки>>\\
+Кафедра <<Физика>> ФН4\\\vspace{1.7cm}
+\end{minipage}
+\end{figure}
+\begin{flushright}
+На правах рукописи\\
+УДК 538.9
+\end{flushright}
+
+\vspace{10mm}
+
+\begin{center}
+\textbf{НАУЧНО-КВАЛИФИКАЦИОННАЯ РАБОТА}\\\vspace{5mm}
+\textbf{<<Определение термодинамических свойств системы по статистике распределений плотностей и явлениях переноса>>}
+\end{center}
+
+
+\vspace{5mm}
+
+\begin{flushleft}
+Направление подготовки: 03.06.01 Физика и астрономия\\
+Направленность (профиль): 01.04.07 Физика конденсированного состояния
+\end{flushleft}
+
+\vspace{5mm}
+
+\begin{table}[h]
+\begin{tabular}{lll}
+Студент\hspace{4cm} & \underline{\hspace{4cm}} & \hspace{2cm}Дмитрюк Н.А.\\\\
+Научный руководитель\\д.ф.-м.н. & \underline{\hspace{4cm}} & \hspace{2cm}Юрченко С.О.
+\end{tabular}
+\end{table}
+
+\vspace{50mm}
+
+\begin{center}
+Москва -- 2020
+\end{center}
+\end{titlepage}
+
+%\nocite{10.1103/PhysRevLett.121.075003, 10.1039/c8sm01836g, 10.1063/1.4979325, 10.1039/C7SM02429K, 10.1063/1.5082785, 10.1063/1.4926945, 10.1088/0953-8984/28/23/235401, 10.1063/1.5022969, 10.1063/1.4921223, 10.1103/PhysRevE.97.022616, 10.1021/acs.langmuir.6b01644, 10.1103/PhysRevE.96.043201, 10.1063/1.5050708, 10.3367/ufnr.2019.01.038520, 10.1063/1.5088141, 10.1364/FIO.2016.FTh4C.2, 10.1088/1742-6596/1135/1/012093}
+\onehalfspacing
+\setcounter{page}{2}
+\tableofcontents
+%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
+%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
+%\addtocontents{toc}{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}
+%\addtocontents{toc}{\protect\afterpage{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}}
+
+
+\input{Introduction_asp.tex}
+\input{Chapter_0.tex}
+\input{Chapter_1.tex}
+\input{Chapter_2.tex}
+%\setcounter{chapter}{0}
+
+
+%\let\BibEmph=\emph
+%\bibliographystyle{gost2008n}
+%\bibliography{Ref2}
+
+%\bibliographystyle{plain}
+%\bibliography{Notesonreferences}
+
+\end{document}
