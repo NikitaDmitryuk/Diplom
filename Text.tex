@@ -43,7 +43,7 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 % Включать подсекции в оглавление
 \setcounter{tocdepth}{2}
 
-\graphicspath{{fig/}}
+\graphicspath{{Ris/}}
 
 \bibliographystyle{unsrt}
 
@@ -69,7 +69,8 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 % \end{minipage}
 \begin{minipage}[b]{0.9\textwidth}\setstretch{1.5}\centering
 Факультет <<Фундаментальные науки>>\\
-Кафедра <<Физика>> ФН4\\\vspace{1.7cm}
+Кафедра <<Физика>> ФН4
+\\\vspace{1.5cm}
 \end{minipage}
 \end{figure}
 \begin{flushright}
@@ -81,7 +82,7 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 
 \begin{center}
 \textbf{НАУЧНО-КВАЛИФИКАЦИОННАЯ РАБОТА}\\\vspace{5mm}
-\textbf{<<Определение термодинамических свойств системы по статистике распределений плотностей и явлениях переноса>>}
+\textbf{<<Роль дальнодействия притяжения в фазовых диаграммах и диффузии в двумерных системах с регулируемыми взаимодействиями>>}
 \end{center}
 
 
@@ -101,7 +102,7 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \end{tabular}
 \end{table}
 
-\vspace{50mm}
+\vspace{40mm}
 
 \begin{center}
 Москва -- 2020
@@ -119,15 +120,22 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 
 
 \input{Introduction_asp.tex}
+\newpage
 \input{Chapter_0.tex}
+\newpage
 \input{Chapter_1.tex}
+\newpage
 \input{Chapter_2.tex}
+\newpage
+\input{Chapter_3.tex}
+\newpage
 %\setcounter{chapter}{0}
 
 
-%\let\BibEmph=\emph
-%\bibliographystyle{gost2008n}
-%\bibliography{Ref2}
+\newpage
+%\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+%\bibliographystyle{ugost2008}
+\bibliography{Bak}
 
 %\bibliographystyle{plain}
 %\bibliography{Notesonreferences}
