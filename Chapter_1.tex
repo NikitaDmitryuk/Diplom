@@ -352,7 +352,7 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \end{aligned}
 \label{eqFitRho}
 \end{equation}
-где $\rho_{max}$ - плотность максимума распределения.
+где $\rho_{max}$ - плотность максимума распределения; $P$ - давление.
 
 
 \begin{figure}[htbp!]
@@ -390,7 +390,6 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{plot_K_Potential LJ-12-4_1}
 \end{minipage}
 
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_K_Potential LJ-12-5_1}
@@ -404,10 +403,30 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \end{center}
 \end{figure}
 
-Текст
+Через данный коэффициент можно выразить некоторые величины для системы, связанные с производной $\frac{\partial \rho}{\partial P}$, например сжимаемость вещества, и скорость звука.
+
+По определению,сжимаемость и изотермическая скорость звука сжимаемость выражаются следующими формулами:
+\begin{equation}
+\beta = \frac{1}{\rho_0} \frac{\partial \rho}{\partial P}
+\label{eqBetaClassic}
+\end{equation}
+\begin{equation}
+C = \sqrt{\frac{\partial P}{\partial \rho}}
+\label{eqCClassic}
+\end{equation}
+Выразив данные величины через коэффициент $K$, получим следующие формулы:
+\begin{equation}
+\beta = \frac{1}{2T\rho_0\rho_{max}^2K}
+\label{eqBeta}
+\end{equation}
+\begin{equation}
+C = \rho_{max}\sqrt{2TK}
+\label{eqC}
+\end{equation}
+Проведя данные вычисления для различных температур, мы получаем зависимость сжимаемости и скорости звука в системе.Данные зависимости изображены на рисунках \ref{risBeta} и \ref{risC}.
 
 
-\begin{figure}[htbp!]
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_Potential LJ-12-3_1}
@@ -417,7 +436,6 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_Potential LJ-12-4_1}
 \end{minipage}
 
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_Potential LJ-12-5_1}
@@ -427,13 +445,12 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_Potential LJ-12-6_1}
 \end{minipage}
 \caption{Температурная зависимость коэффициента $\beta$ сжимаемости вещества.}
-\label{ris13}
+\label{risBeta}
 \end{center}
 \end{figure}
 
-Текст
 
-\begin{figure}[htbp!]
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_Potential LJ-12-3_1}
@@ -443,7 +460,6 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_Potential LJ-12-4_1}
 \end{minipage}
 
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_Potential LJ-12-5_1}
@@ -453,13 +469,19 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_Potential LJ-12-6_1}
 \end{minipage}
 \caption{Температурная зависимость скорости звука в веществе.}
-\label{ris14}
+\label{risC}
 \end{center}
 \end{figure}
 
-Текст
+Кроме того, интересное поведение проявляют температурные зависимости  моментов для плотности, изображенные на рисунке \ref{risMu}.
 
-\begin{figure}[htbp!]
+Данные величины вычисляются по следующей формуле:
+\begin{equation}
+\mu_i = \mathbb{M} \left[ |\rho - \mathbb{M} \rho|^i \right]
+\end{equation}
+По данной зависимости можно судить о температуре с максимальными флуктуациями плотности системы, так называемой линии Уидома для плотности системы.
+
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_moment_Potential LJ-12-3_1}
@@ -469,7 +491,6 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{plot_moment_Potential LJ-12-4_1}
 \end{minipage}
 
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_moment_Potential LJ-12-5_1}
@@ -479,11 +500,18 @@ K &= \frac{1}{2T\rho_{max}^2} \left( \frac{\partial P}{\partial \rho} \right)
 \includegraphics[width=\textwidth, keepaspectratio]{plot_moment_Potential LJ-12-6_1}
 \end{minipage}
 \caption{Температурная зависимость моментов величины $\mu$.}
-\label{ris14}
+\label{risMu}
 \end{center}
 \end{figure}
 
-Текст
+
 
 \section{Выводы главы}\label{C2_4}
-Вывод.
+
+В данной главе были рассмотрены метод распознавания фаз, позволяющий классифицировать все частицы в системе как газ, поверхность или конденсат, который был существенно модернизирован в рамках данной работы, и в некоторых случаях позволяет существенно улучшить распознавание фаз. 
+
+Также в данной главе был рассмотрен способ получения фазовых диаграмм в координатах $\rho, T$, который основан на вычислении математического ожидания плотности конденсата и косвенного определения плотности газа, что является нововведением для данного метода, позволяющее убрать влияние поверхностных частиц на значения плотности газа. 
+
+Так же был рассмотрен метод получения значений критической точки, с помощью аппроксимации ветвей бинодали. 
+
+Также в главе было рассмотрено влияние притяжения в системе на фазовые диаграммы, что позволяет в той или иной мере предсказывать поведение систем с тем или иным притяжением.
