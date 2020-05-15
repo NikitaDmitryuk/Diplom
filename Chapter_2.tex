@@ -64,7 +64,7 @@
 \end{equation}
 где $D$ - коэффициент диффузии в веществе.
 
-Его можно получить путем аппроксимации среднеквадратичного смещения функцией $\sigma^2(t) = 4Dt + a$, где $а$ - подгоночный коэффициент. Аппроксимация производится начиная не с 0 по времени, а с некоторого значения, когда функция становится линейной. Данный эффект хорошо наблюдается при $T = 0.36$ на рисунке \ref{risRMS}. Наблюдения показывают, что для данных экспериментов достаточно использовать последние $60\%$ точек, для правильной аппроксимации.  
+Его можно получить путем аппроксимации среднеквадратичного смещения функцией $\sigma^2(t) = 4Dt + a$, где $a$ - подгоночный коэффициент. Аппроксимация производится начиная не с 0 по времени, а с некоторого значения, когда функция становится линейной. Данный эффект хорошо наблюдается при $T = 0.36$ на рисунке \ref{risRMS}. Наблюдения показывают, что для данных экспериментов достаточно использовать последние $60\%$ точек, для правильной аппроксимации.  
 
 \begin{figure}[h]
 \begin{center}
@@ -87,7 +87,10 @@
 
 Проводя данные вычисления для различных температур, можно установить температурную зависимость коэффициента диффузии для различных потенциалов взаимодействия, изображенную на рисунке \ref{risD}.
 
-\begin{figure}[htbp!]
+Полученные результаты хорошо согласуются с экспериментом, например в $LJ12-6$, $T_{TP} = 0.405$, что соответствует температуре, при которой значение коэффициента диффузии начинает расти.  
+
+
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-4_1}
@@ -104,47 +107,26 @@
 \includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-6_1}
 \end{minipage}
 \caption{Температурная зависимость мобильности для различных потенциалов взаимодействия. Не доделана!}
-\label{ris18}
+\label{risMuDiff}
 \end{center}
 \end{figure}
 
-Текст
+Кроме диффузии мы можем вычислить мобильность частиц в системе, которая определяется следующим образом:
+\begin{equation}
+    \mu  = \frac{D}{T},
+    \label{eqMuDiff}
+\end{equation}
+где $\mu$ - мобильность частиц.
 
-Текст
 
-\begin{figure}[htbp!]
-\begin{center}
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-4_1}
-\end{minipage}
-%\hfill
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-4_1}
-\end{minipage}
-
-%\vfill
-
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-5_1}
-\end{minipage}
-%\hfill
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_mobility_Potential LJ-12-6_1}
-\end{minipage}
-\caption{Температурная зависимость мобильности для различных потенциалов взаимодействия. Не доделана!}
-\label{ris19}
-\end{center}
-\end{figure}
-
-Текст
+Зависимость мобильности частиц от температуры представлена на рисунке \ref{risMuDiff}.
+Как можно заметить, данная зависимость скорее всего линейная в промежутке от тройной до критической точки, что не наблюдалось никогда ранее.
 
 \section{Связь термодинамических параметров, и параметров переноса вещества}\label{C3_2}
 
-Текст
+В попытках выяснить зависимость параметров переноса вещества от его термодинамических параметров, были построены зависимости мобильности от сжимаемости и диффузии (рисунки \ref{risMuBeta}, \ref{risDBeta}), а так же зависимость скорости звука от мобильности (рисунок \ref{risCMu}).
 
-Текст
-
-\begin{figure}[htbp!]
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-4_1}
@@ -153,8 +135,6 @@
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-4_1}
 \end{minipage}
-
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-5_1}
@@ -164,15 +144,12 @@
 \includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-6_1}
 \end{minipage}
 \caption{Зависимость мобильности от сжимаемости. Не доделана!}
-\label{ris20}
+\label{risMuBeta}
 \end{center}
 \end{figure}
 
-Текст
 
-Текст
-
-\begin{figure}[htbp!]
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_diffusion_compress_Potential LJ-12-4_1}
@@ -181,8 +158,6 @@
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_diffusion_compress_Potential LJ-12-4_1}
 \end{minipage}
-
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_diffusion_compress_Potential LJ-12-5_1}
@@ -191,44 +166,14 @@
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{plot_diffusion_compress_Potential LJ-12-6_1}
 \end{minipage}
-\caption{Зависимость мобильности от сжимаемости. Не доделана!}
-\label{ris21}
+\caption{Зависимость диффузии от сжимаемости. Не доделана!}
+\label{risDBeta}
 \end{center}
 \end{figure}
 
-Текст
 
-Текст
 
-\begin{figure}[htbp!]
-\begin{center}
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-4_1}
-\end{minipage}
-%\hfill
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-4_1}
-\end{minipage}
-
-%\vfill
-
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-5_1}
-\end{minipage}
-%\hfill
-\begin{minipage}[h]{0.45\linewidth}
-\includegraphics[width=\textwidth, keepaspectratio]{plot_compress_mobility_Potential LJ-12-6_1}
-\end{minipage}
-\caption{Зависимость мобильности от сжимаемости. Не доделана!}
-\label{ris22}
-\end{center}
-\end{figure}
-
-Текст
-
-Текст
-
-\begin{figure}[htbp!]
+\begin{figure}[h]
 \begin{center}
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_mobility_Potential LJ-12-4_1}
@@ -237,8 +182,6 @@
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_mobility_Potential LJ-12-4_1}
 \end{minipage}
-
-%\vfill
 
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_mobility_Potential LJ-12-5_1}
@@ -247,13 +190,12 @@
 \begin{minipage}[h]{0.45\linewidth}
 \includegraphics[width=\textwidth, keepaspectratio]{sound_speed_mobility_Potential LJ-12-6_1}
 \end{minipage}
-\caption{Зависимость мобильности от сжимаемости. Не доделана!}
-\label{ris23}
+\caption{Зависимость скорости звука от мобильности. Не доделана!}
+\label{risCMu}
 \end{center}
 \end{figure}
 
-Текст
 
 \section{Выводы главы}\label{C3_3}
 
-Вывод
+В данной главе были рассмотрены расчеты диффузии методами молекулярной динамики, и его особенности. Так же было установлено, что зависимость мобильности частиц от тройной до критической точки имеет линейную зависимость.
