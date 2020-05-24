@@ -9,7 +9,7 @@ times % шрифт Times как основной
 
 \usepackage[
 a4paper, mag=1000,
-left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 ]{geometry}
 \usepackage[T2A]{fontenc}
 
@@ -43,7 +43,7 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \fancyhf{} % очистка текущих значений
 \fancyfoot[C]{\thepage} % установка верхнего колонтитула
 \renewcommand{\headrulewidth}{0pt} % убрать разделительную линию
-
+\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 \captionsetup{format=hang,labelsep=period}
 
 % Использовать полужирное начертание для векторов
@@ -121,8 +121,10 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 %\nocite{10.1103/PhysRevLett.121.075003, 10.1039/c8sm01836g, 10.1063/1.4979325, 10.1039/C7SM02429K, 10.1063/1.5082785, 10.1063/1.4926945, 10.1088/0953-8984/28/23/235401, 10.1063/1.5022969, 10.1063/1.4921223, 10.1103/PhysRevE.97.022616, 10.1021/acs.langmuir.6b01644, 10.1103/PhysRevE.96.043201, 10.1063/1.5050708, 10.3367/ufnr.2019.01.038520, 10.1063/1.5088141, 10.1364/FIO.2016.FTh4C.2, 10.1088/1742-6596/1135/1/012093}
 \onehalfspacing
 \setcounter{page}{2}
+\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{fancy}}
+\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 %\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
 %\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
 %\addtocontents{toc}{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}
@@ -145,8 +147,8 @@ left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \newpage
 %\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 
-\bibliographystyle{ugost2008}
-\bibliography{Bak}
+\bibliographystyle{ugost2008}{\protect\thispagestyle{fancy}}
+\bibliography{Bak}{\protect\thispagestyle{fancy}}
 
 %\bibliographystyle{plain}
 %\bibliography{Notesonreferences}
