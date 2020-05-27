@@ -124,6 +124,7 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{fancy}}
+\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 %\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
 %\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
 %\addtocontents{toc}{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}
@@ -143,11 +144,12 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 %\setcounter{chapter}{0}
 
 
-\newpage
-%\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 
-\bibliographystyle{ugost2008}
-\bibliography{Bak}{\protect\thispagestyle{fancy}}
+\newpage
+\renewcommand{\refname}{Список использованных источников}
+\bibliographystyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
+\bibliography{Bak}
+
 
 %\bibliographystyle{plain}
 %\bibliography{Notesonreferences}
