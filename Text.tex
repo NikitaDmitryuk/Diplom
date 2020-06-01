@@ -7,24 +7,32 @@ times % шрифт Times как основной
 %,fixint=false % отключить прямые знаки интегралов
 ]{disser}
 
-\usepackage[
-a4paper, mag=1000,
-left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
-]{geometry}
-\usepackage[T2A]{fontenc}
 
+\setlength{\parindent}{1.25cm}
+\usepackage[a4paper,14pt,left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage{indentfirst}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
-
-\usepackage{tempora}
-\usepackage{paratype}
-%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic} 
-%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+%\renewcommand{\rmdefault}{ftm}
 \usepackage{pdfpages}
 \ifpdf\usepackage{epstopdf}\fi
 
+\usepackage{caption} % подписи к рисункам в русской типографской традиции
+\DeclareCaptionFormat{GOSTtable}{#2#1\\#3}
+\DeclareCaptionLabelSeparator{fill}{\hfill}
+\DeclareCaptionLabelFormat{fullparents}{\bothIfFirst{#1}{~}#2}
+\captionsetup[table]{
+     format=GOSTtable,
+     labelsep=fill,
+     %labelfont=it,
+     textfont=bf,
+     justification=centering,
+     singlelinecheck=false
+     }
 \usepackage{dcolumn}
 \usepackage{bm}
+\usepackage{cmap}
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{epstopdf}
@@ -32,29 +40,38 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \usepackage{amssymb}
 \usepackage{cite}
 \usepackage{multirow}
-\usepackage{afterpage}
+\usepackage{lscape}
 \usepackage[font={normal}]{caption}
-\usepackage{setspace}
-\usepackage{amsmath} % align
-\usepackage[onehalfspacing]{setspace}% 1,5 интервал
-%\usepackage{biblatex}
-\usepackage{fancyhdr} % пакет для установки колонтитулов
-\pagestyle{fancy} % смена стиля оформления страниц
-\fancyhf{} % очистка текущих значений
-\fancyfoot[C]{\thepage} % установка верхнего колонтитула
-\renewcommand{\headrulewidth}{0pt} % убрать разделительную линию
+\renewcommand{\baselinestretch}{1.3}
+%\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tempora}
+%\usepackage{pscyr}
+\usepackage{enumitem}
+\setlist{nolistsep, itemsep=0.3cm,parsep=0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}}
+\setcounter{page}{6} % начать нумерацию страниц с №2
+\usepackage[onehalfspacing]{setspace}
 
-\captionsetup{format=hang,labelsep=period}
+
+
+%\captionsetup{format=hang,labelsep=period}
 
 % Использовать полужирное начертание для векторов
 \let\vec=\mathbf
 
 % Включать подсекции в оглавление
-%\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{2}
 
 \graphicspath{{Ris/}}
 
-\bibliographystyle{unsrt}
 
 \begin{document}
 %\includepdf[pages={1-1}]{NIRS.pdf}
@@ -118,17 +135,13 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \end{center}
 \end{titlepage}
 
-%\nocite{10.1103/PhysRevLett.121.075003, 10.1039/c8sm01836g, 10.1063/1.4979325, 10.1039/C7SM02429K, 10.1063/1.5082785, 10.1063/1.4926945, 10.1088/0953-8984/28/23/235401, 10.1063/1.5022969, 10.1063/1.4921223, 10.1103/PhysRevE.97.022616, 10.1021/acs.langmuir.6b01644, 10.1103/PhysRevE.96.043201, 10.1063/1.5050708, 10.3367/ufnr.2019.01.038520, 10.1063/1.5088141, 10.1364/FIO.2016.FTh4C.2, 10.1088/1742-6596/1135/1/012093}
+
 \onehalfspacing
 \setcounter{page}{2}
 \renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
 \tableofcontents
 \addtocontents{toc}{\protect\thispagestyle{fancy}}
 \renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
-%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
-%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
-%\addtocontents{toc}{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}
-%\addtocontents{toc}{\protect\afterpage{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}}
 
 
 \input{Introduction_asp.tex}
@@ -150,8 +163,5 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \bibliographystyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
 \bibliography{Bak}
 
-
-%\bibliographystyle{plain}
-%\bibliography{Notesonreferences}
 
 \end{document}
