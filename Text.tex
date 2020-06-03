@@ -71,11 +71,7 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 }
 \end{center}
 \begin{figure}[h!]
-% \begin{minipage}[b]{0.2\textwidth}\centering
-%\begin{flushright}
-% \includegraphics[width=0.9\linewidth]{r2.png}
-%\end{flushright}
-% \end{minipage}
+
 \begin{minipage}[b]{0.9\textwidth}\setstretch{1.5}\centering
 Факультет <<Фундаментальные науки>>\\
 Кафедра <<Физика>> ФН4
@@ -118,18 +114,6 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \end{center}
 \end{titlepage}
 
-%\nocite{10.1103/PhysRevLett.121.075003, 10.1039/c8sm01836g, 10.1063/1.4979325, 10.1039/C7SM02429K, 10.1063/1.5082785, 10.1063/1.4926945, 10.1088/0953-8984/28/23/235401, 10.1063/1.5022969, 10.1063/1.4921223, 10.1103/PhysRevE.97.022616, 10.1021/acs.langmuir.6b01644, 10.1103/PhysRevE.96.043201, 10.1063/1.5050708, 10.3367/ufnr.2019.01.038520, 10.1063/1.5088141, 10.1364/FIO.2016.FTh4C.2, 10.1088/1742-6596/1135/1/012093}
-\onehalfspacing
-\setcounter{page}{2}
-\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
-\tableofcontents
-\addtocontents{toc}{\protect\thispagestyle{fancy}}
-\renewcommand{\contentsname}{\centerline{\Large{Cодержание}}}
-%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
-%\addtocontents{toc}{~\hfill\textbf{Стр.}\par}
-%\addtocontents{toc}{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}
-%\addtocontents{toc}{\protect\afterpage{\protect\afterpage{~\hfill\textbf{Стр.}\par\medskip}}}
-
 
 \input{Introduction_asp.tex}
 \newpage
@@ -141,17 +125,11 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \newpage
 \input{Chapter_3.tex}
 \newpage
-%\setcounter{chapter}{0}
 
 
-
-\newpage
 \renewcommand{\refname}{Список использованных источников}
 \bibliographystyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
 \bibliography{Bak}
 
-
-%\bibliographystyle{plain}
-%\bibliography{Notesonreferences}
 
 \end{document}
