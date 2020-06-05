@@ -55,6 +55,8 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \graphicspath{{Ris/}}
 
 \bibliographystyle{unsrt}
+\pagestyle{footcenter}
+\chapterpagestyle{footcenter}
 
 
 \begin{document}
@@ -129,7 +131,7 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 
 
 \renewcommand\bibname{\normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
-\thispagestyle{fancy}
+\let\BibEmph=\emph
 \bibstyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
 \bibliography{Bak}
 
