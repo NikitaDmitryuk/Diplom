@@ -34,7 +34,7 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \usepackage{multirow}
 \usepackage{afterpage}
 \usepackage[font={normal}]{caption}
-\usepackage{setspace}
+%\usepackage{setspace}
 \usepackage{amsmath} % align
 \usepackage[onehalfspacing]{setspace}% 1,5 интервал
 %\usepackage{biblatex}
@@ -55,6 +55,7 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \graphicspath{{Ris/}}
 
 \bibliographystyle{unsrt}
+
 
 \begin{document}
 %\includepdf[pages={1-1}]{NIRS.pdf}
@@ -127,9 +128,10 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \newpage
 
 
-\renewcommand{\refname}{Список использованных источников}
-\bibliographystyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
-\bibliography{Bak}
+\renewcommand\bibname{\normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\thispagestyle{fancy}
+\bibstyle{ugost2008}  %% стилевой файл для оформления по ГОСТу
+\bibliography{Bak}{\protect\thispagestyle{fancy}}
 
 
 \end{document}
